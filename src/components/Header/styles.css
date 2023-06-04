@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+.header img {
+  height: 50px;
+  width: 65px;
+  margin: 0 30px;
+}
+
+.header .btnHeader {
+  display: flex;
+  align-items: center;
+}
+
+.header .btnHeader a {
+  margin-right: 30px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 4px solid transparent;
+  color: #424242;
+  text-decoration: none;
+}
+
+.header .btnHeader li:hover {
+  border-bottom: 4px solid #414040;
+  transition: 0.9s;
+}

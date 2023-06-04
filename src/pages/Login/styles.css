@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e5e5e5;
+}
+.container .containerLogin {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .containerLogin .containerLogo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 2.8rem;
+  margin-top: 4.5rem;
+}
+.container .containerLogin .containerLogo img {
+  width: 100%;
+  height: 100%;
+}
+.container .containerLogin .form {
+  width: 100%;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.container .containerLogin .form input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 1rem;
+  padding-left: 8px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+}
+.container .containerLogin .form .btnLogin {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #463f3a;
+  color: #f1f1f1;
+}
+.container .containerLogin .form .textoCadastro {
+  font-size: 1.2rem;
+  align-items: center;
+  margin-top: 10px;
+}
+.container .containerLogin .form .textoCadastro a {
+  color: #463f3a;
+  margin-left: 4px;
+}

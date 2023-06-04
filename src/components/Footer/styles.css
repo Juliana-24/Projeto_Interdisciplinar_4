@@ -1,0 +1,20 @@
+.footer {
+  height: 80px;
+  width: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.footer p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #727272;
+}
+
+.footer p span {
+  color: #686868;
+  font-weight: bold;
+}
