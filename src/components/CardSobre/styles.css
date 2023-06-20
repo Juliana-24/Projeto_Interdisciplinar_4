@@ -1,0 +1,36 @@
+.containerCardSobre {
+  min-height: 10rem;
+  border: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.containerCardSobre .containerIcone {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 0.5rem;
+}
+.containerCardSobre .containerTextosCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 0.9rem;
+}
+.containerCardSobre .containerTextosCard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #464646;
+}
+.containerCardSobre .containerTextosCard p {
+  font-size: 1rem;
+  color: #6e6e6e;
+}
