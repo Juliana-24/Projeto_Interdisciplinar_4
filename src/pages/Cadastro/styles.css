@@ -5,7 +5,7 @@
   min-height: 100vh;
   background-color: #e5e5e5;
 }
-.container .containerLogin {
+.container .containerCadastro {
   width: 500px;
   height: 500px;
   border-radius: 10px;
@@ -13,21 +13,36 @@
   align-items: center;
   flex-direction: column;
 }
-.container .containerLogin .containerLogo {
+.container .containerCadastro .containerInicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.container .containerCadastro .containerInicio .containerLogo {
   width: 100px;
   height: 100px;
-  margin-bottom: 2.8rem;
   margin-top: 4.5rem;
+  margin-bottom: 0.5rem;
 }
-.container .containerLogin .containerLogo img {
+.container .containerCadastro .containerInicio .containerLogo img {
   width: 100%;
   height: 100%;
 }
-.container .containerLogin .form {
+.container .containerCadastro .containerInicio h1 {
+  color: #463f3a;
+  font-size: 2.3rem;
+}
+.container .containerCadastro .form {
   width: 100%;
   padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
-.container .containerLogin .form input {
+.container .containerCadastro .form input {
   width: 100%;
   height: 50px;
   margin-bottom: 1rem;
@@ -37,7 +52,7 @@
   border: none;
   outline: none;
 }
-.container .containerLogin .form .btnLogin {
+.container .containerCadastro .form .btnCadastro {
   width: 100%;
   height: 50px;
   border: none;
@@ -47,4 +62,13 @@
   cursor: pointer;
   background-color: #463f3a;
   color: #f1f1f1;
+}
+.container .containerCadastro .form .textoCadastro {
+  font-size: 1.2rem;
+  align-items: center;
+  margin-top: 10px;
+}
+.container .containerCadastro .form .textoCadastro a {
+  color: #463f3a;
+  margin-left: 4px;
 }

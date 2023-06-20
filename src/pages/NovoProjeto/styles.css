@@ -1,0 +1,127 @@
+.containerNovoProjeto {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e5e5e5;
+}
+.containerNovoProjeto .containerTopo {
+  width: 100%;
+  height: 18rem;
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #4d4855 0%, #272626 74%);
+}
+.containerNovoProjeto .containerForm {
+  background-color: #fefefe;
+  width: 580px;
+  height: 600px;
+  /* height: 610px;
+  width: 650px; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.4rem 0 1.4rem;
+  align-items: center;
+  margin-top: -8rem;
+  margin-bottom: 8rem;
+}
+.containerNovoProjeto .containerForm .containerTopoForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.containerNovoProjeto .containerForm .containerTopoForm .linhaTopo {
+  width: 100%;
+  height: 1px;
+  background-color: #ababab;
+  margin-top: 1rem;
+}
+.containerNovoProjeto .containerForm .containerTopoForm .containerImagem {
+  width: 75px;
+  height: 75px;
+}
+
+.containerNovoProjeto .containerForm .containerTopoForm .containerImagem img {
+  height: 100%;
+  width: 100%;
+}
+
+.containerNovoProjeto .containerForm .btnAdicionar {
+  border: none;
+  font-size: 0.9rem;
+  height: 35px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a4a4a;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+.containerNovoProjeto .containerForm .btnAdicionar:hover {
+  background-color: rgb(218, 218, 218);
+  transition: 0.9s;
+}
+.containerNovoProjeto .containerForm .btnAdicionar svg {
+  margin-right: 5px;
+}
+
+.containerNovoProjeto .containerForm .containerInputs {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.containerNovoProjeto .containerForm .containerInputs .containerItensInput {
+  display: flex;
+  height: 40px;
+  margin-bottom: 15px;
+  flex-direction: row;
+}
+
+.containerNovoProjeto .containerForm .containerInputs button {
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.containerNovoProjeto .containerForm .containerTopoForm h2 {
+  font-size: 2rem;
+  color: #463f3a;
+  margin-top: 0.3rem;
+}
+
+.containerNovoProjeto .containerForm input {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+  padding-left: 5px;
+  color: #525252;
+}
+.containerNovoProjeto .containerForm .btnCriarProjeto {
+  width: 50%;
+  border: none;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #463f3a;
+  color: #f1f1f1;
+  cursor: pointer;
+  margin-top: 1rem;
+}

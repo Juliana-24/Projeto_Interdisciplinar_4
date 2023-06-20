@@ -1,0 +1,13 @@
+.containerSemProjetos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  flex-direction: column;
+  min-height: 14rem;
+}
+.containerSemProjetos p {
+  text-align: center;
+  color: #7c7c7c;
+  font-size: 1.6rem;
+}

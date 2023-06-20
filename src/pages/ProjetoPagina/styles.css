@@ -1,0 +1,175 @@
+.containerProjeto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e5e5e5;
+}
+
+.containerProjeto .containerTopo {
+  width: 100%;
+  height: 18rem;
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #4d4855 0%, #272626 74%);
+}
+.containerProjeto .containerConteudo {
+  display: flex;
+  flex-direction: column;
+  width: 580px;
+  height: 650px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin-top: -8rem;
+  margin-bottom: 8rem;
+}
+.containerProjeto .containerConteudo .containerCarregando {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+.containerProjeto .containerConteudo .containerTitulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.containerProjeto .containerConteudo .containerTitulo h1 {
+  color: #474747;
+  text-transform: capitalize;
+}
+
+.containerProjeto .containerConteudo .containerTitulo .btnExcluirProjeto {
+  border: 2px solid #ae2012;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ae2012;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.9s;
+}
+
+.containerProjeto .containerConteudo .containerTitulo .btnExcluirProjeto:hover {
+  background-color: #ae2012;
+  color: #f1f1f1;
+}
+.containerProjeto .containerConteudo .containerRequisitos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.containerProjeto .containerConteudo .containerRequisitos .containerRequisito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.4rem;
+  height: 35px;
+  /* margin-bottom: 10px; */
+}
+.containerProjeto
+  .containerConteudo
+  .containerRequisitos
+  .containerRequisito
+  button {
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px;
+}
+.checked {
+  text-decoration: line-through;
+}
+.default {
+  color: #292929;
+}
+.linha {
+  height: 1px;
+  width: 100%;
+  background-color: #ddd;
+  margin-top: 0.3rem;
+}
+.containerProjeto .containerConteudo .btnAdicionar {
+  border: none;
+  font-size: 0.9rem;
+  height: 35px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #4a4a4a;
+  margin-top: 0.8rem;
+}
+.containerProjeto .containerConteudo .btnAdicionar:hover {
+  background-color: rgb(218, 218, 218);
+  transition: 0.9s;
+  border-radius: 5px;
+}
+.containerProjeto .containerConteudo .btnAdicionar svg {
+  margin-right: 5px;
+}
+
+.containerProjeto .containerConteudo .containerInputs {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.containerProjeto .containerConteudo .containerInputs .containerItensInput {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.containerProjeto .containerConteudo .containerInputs input {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+  padding-left: 5px;
+  color: #525252;
+}
+.containerProjeto .containerConteudo .containerInputs button {
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.containerProjeto .containerConteudo .containerBtnEnviar {
+  width: 100%;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+}
+.containerProjeto .containerConteudo .containerBtnEnviar .btnEnviar {
+  height: 40px;
+  border: none;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #f8f8f8;
+  background-color: rgb(29, 109, 58);
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}

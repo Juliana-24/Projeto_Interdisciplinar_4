@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #e5e5e5;
 }
 .container .containerLogin {
@@ -40,13 +40,33 @@
   font-size: 1.1rem;
   border: none;
   outline: none;
+  color: #463f3a;
+}
+.container .containerLogin .form .containerErro {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #ae2012;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+.container .containerLogin .form .containerErro p {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  margin-left: 5px;
+  font-weight: 600;
 }
 .container .containerLogin .form .btnLogin {
   width: 100%;
   height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1.2rem;
   border: none;
   border-radius: 5px;
-  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   background-color: #463f3a;

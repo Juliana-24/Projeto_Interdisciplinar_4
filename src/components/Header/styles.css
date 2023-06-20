@@ -4,12 +4,18 @@
   justify-content: space-between;
   height: 65px;
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: #27292a;
+  padding: 0 25px;
 }
 .header img {
   height: 50px;
   width: 65px;
-  margin: 0 30px;
+}
+
+.header .containerInicio {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
 .header .btnHeader {
@@ -17,18 +23,25 @@
   align-items: center;
 }
 
+#menuIcone svg {
+  color: #9a9a9a;
+  margin: 0 4px;
+  height: 20px;
+  width: 28px;
+}
+
 .header .btnHeader a {
-  margin-right: 30px;
+  margin-right: 25px;
   cursor: pointer;
   padding: 5px;
   font-size: 1.1rem;
   font-weight: bold;
   border-bottom: 4px solid transparent;
-  color: #424242;
+  color: #d9d9d9;
   text-decoration: none;
 }
 
-.header .btnHeader li:hover {
-  border-bottom: 4px solid #414040;
+.header .btnHeader a:hover {
+  border-bottom: 4px solid #d9d9d9;
   transition: 0.9s;
 }

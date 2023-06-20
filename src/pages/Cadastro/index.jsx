@@ -1,52 +1,50 @@
 import { useState } from "react";
+
+import { useNavigate, Link } from "react-router-dom";
+
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 import { auth } from "../../services/firebaseConfig";
+
+import swal from "sweetalert";
 
 import logo from "../../assets/logo.png";
 
 import "./styles.css";
 
 export default function Login() {
-  // const [nome, setNome] = useState("");
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword] =
     useCreateUserWithEmailAndPassword(auth);
 
   function handleSignOut(e) {
     e.preventDefault();
-    createUserWithEmailAndPassword(email, password);
+    createUserWithEmailAndPassword(email, password)
+      .then((response) => {
+        swal(
+          "Cadastro realizado!",
+          "Seu cadastro foi criado com sucesso!",
+          "success"
+        );
+        navigate("/");
+        console.log(response);
+      })
+      .catch((error) => console.log(error));
   }
 
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-  if (user) {
-    return console.log(user);
-  }
   return (
     <div className="container">
-      <div className="containerLogin">
-        <div className="containerLogo">
-          <img src={logo} alt="imagem logo" />
+      <div className="containerCadastro">
+        <div className="containerInicio">
+          <div className="containerLogo">
+            <img src={logo} alt="imagem logo" />
+          </div>
+          <h1>Cadastro</h1>
         </div>
         <form className="form">
-          {/* <input
-            type="text"
-            name="nome"
-            placeholder="Digite seu nome"
-            onChange={(e) => setNome(e.target.value)}
-            required
-          /> */}
           <input
             type="email"
             name="email"
@@ -61,9 +59,12 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button className="btnLogin" onClick={handleSignOut}>
+          <button className="btnCadastro" onClick={handleSignOut}>
             Cadastrar
           </button>
+          <p className="textoCadastro">
+            Já tem conta?<Link to="/">Login</Link>
+          </p>
         </form>
       </div>
     </div>

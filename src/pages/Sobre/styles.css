@@ -1,0 +1,87 @@
+.containerInicioSobre {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../../assets/backgroundImageSobre1.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  color: #bebebe;
+  padding-top: 210px;
+  padding-bottom: 100px;
+  /* filter: blur(4px); */
+}
+.containerInicioSobre .containerTextos {
+  padding: 70px 20px;
+  width: 55%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+.containerInicioSobre .containerTextos h1 {
+  font-size: 4.5rem;
+}
+.containerInicioSobre .containerTextos p {
+  color: #999999;
+  font-size: 1.4rem;
+}
+.containerInicioSobre .containerSeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+}
+.containerInicioSobre .containerSeta img {
+  width: 105px;
+}
+.containerInfo {
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 80px 20px;
+}
+.containerInfo .containerBorderImagem {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  display: flex;
+  justify-content: flex-end;
+}
+.containerInfo .containerBorderImagem .containerImagemInformacoes {
+  background-color: green;
+  width: 400px;
+  height: 400px;
+  margin-top: -30px;
+  margin-right: -40px;
+}
+.containerInfo .containerInformacoes {
+  background-color: #e9e8e8;
+
+  margin-top: -30px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.containerInfo .containerInformacoes .containerTexto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -30px;
+  margin: 40px 40px;
+  padding: 0 20px;
+  /* background-color: #d85858; */
+}
+.containerInfo .containerInformacoes .containerTexto h2 {
+  font-size: 2.5rem;
+  color: #464646;
+  /* margin-bottom: 0.5rem; */
+}
+.containerInfo .containerInformacoes .containerTexto p {
+  color: #6e6e6e;
+  text-align: center;
+}
