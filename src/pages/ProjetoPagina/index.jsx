@@ -211,16 +211,16 @@ export default function ProjetoPagina() {
 
       deletarProjeto(nomeProjeto);
 
+      lerDados();
+
+      setInputs([]);
+      setCheckedItems([]);
+
       swal(
         "Projeto deletado",
         "Seu projeto foi deletado com sucesso!",
         "success"
       );
-
-      setInputs([]);
-      setCheckedItems([]);
-      lerDados();
-
       navigate("/home");
     } catch (error) {
       console.error(error);

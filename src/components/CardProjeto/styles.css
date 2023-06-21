@@ -3,7 +3,8 @@
   border-radius: 20px;
 }
 .containerCard .containerImagem {
-  position: relative;
+  /* position: relative; */
+  width: 430px;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .containerCard .containerImagem img {

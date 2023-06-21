@@ -10,14 +10,25 @@ import CardProjeto from "../../components/CardProjeto";
 import CarregandoProjetos from "../../components/CarregandoProjetos";
 import SemProjetos from "../../components/SemProjetos";
 
+// import img from "../../assets/imagemSobre.jpg"
+
 import "./styles.css";
 
 export default function Home() {
+  const uidUsuario = sessionStorage.getItem("@Auth:usuario");
+
   const [dados, setDados] = useState([]);
   const [carregando, setCarregando] = useState(false);
   const [semProjetos, setSemProjetos] = useState(false);
 
-  const uidUsuario = sessionStorage.getItem("@Auth:usuario");
+  const images = [
+    {
+      src: "../../assets/imagemSobre.jpg",
+    },
+    {
+      src: "../../assets/imagemSobre2.jpg",
+    },
+  ];
 
   const lerDadosProjetos = async () => {
     const usersCollection = collection(dataBaseApp, "users");

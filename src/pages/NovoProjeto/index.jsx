@@ -28,6 +28,14 @@ export default function NovoProjeto() {
   const [sucesso, setSucesso] = useState(false);
   const [enviando, setEnviando] = useState(false);
 
+  const requisitosObrigatorios = [
+    "Reconhecimento do problema",
+    "Avaliaçao e síntese",
+    "Modelagem",
+    "Especificação",
+    "Revisão",
+  ];
+
   function fecharSnackbar() {
     setOpen(false);
   }
@@ -72,8 +80,10 @@ export default function NovoProjeto() {
     const userDoc = doc(usersCollection, uidUsuario);
     const projetosCollection = collection(userDoc, nomeProjeto);
 
+    const valores = requisitosObrigatorios.concat(inputs);
+
     try {
-      const etapas = inputs.map((etapa, index) => ({
+      const etapas = valores.map((etapa, index) => ({
         nome: etapa,
         checked: checkedItems[index] || false,
       }));
