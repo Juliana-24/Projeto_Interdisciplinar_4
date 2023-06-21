@@ -32,7 +32,7 @@ export default function Sobre() {
       </div>
       <div
         className="containerInfo"
-        data-aos="fade-up-left"
+        data-aos="fade-down"
         data-aos-duration="1500"
       >
         <div className="containerBorderImagem">

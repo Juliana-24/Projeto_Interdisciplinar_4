@@ -112,12 +112,12 @@ export default function FormContato() {
         </MuiAlert>
       </Snackbar>
 
-      <div
-        className="containerFormContato"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
-        <div className="containerForm">
+      <div className="containerFormContato">
+        <div
+          className="containerForm"
+          data-aos="zoom-in-right"
+          data-aos-duration="1300"
+        >
           <h1>Contato</h1>
           <p>Mande sua mensagem, que vamos entrar em contato com você</p>
           <form>

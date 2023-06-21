@@ -13,7 +13,7 @@ import SemProjetos from "../../components/SemProjetos";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import img from "../../assets/imagemSobre.jpg"
+import logo from "../../assets/logo.png";
 
 import "./styles.css";
 
@@ -25,15 +25,6 @@ export default function Home() {
   const [dados, setDados] = useState([]);
   const [carregando, setCarregando] = useState(false);
   const [semProjetos, setSemProjetos] = useState(false);
-
-  const images = [
-    {
-      src: "../../assets/imagemSobre.jpg",
-    },
-    {
-      src: "../../assets/imagemSobre2.jpg",
-    },
-  ];
 
   const lerDadosProjetos = async () => {
     const usersCollection = collection(dataBaseApp, "users");
@@ -114,6 +105,19 @@ export default function Home() {
               )}
             </>
           )}
+        </div>
+        <div className="containerParteFinal">
+          <div className="containerLogo">
+            <img src={logo} alt="" />
+          </div>
+          <div className="containerTextosFinais">
+            <h2>Análise de Requisitos</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
+              saepe voluptatum nostrum exercitationem quia adipisci laboriosam
+              corrupti error ducimus mollitia?
+            </p>
+          </div>
         </div>
       </div>
 

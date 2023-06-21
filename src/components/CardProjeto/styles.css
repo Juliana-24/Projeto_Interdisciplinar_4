@@ -1,6 +1,7 @@
 .containerCard {
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
   border-radius: 20px;
+  box-shadow: 7px 4px 36px 10px rgba(0, 0, 0, 0.19);
 }
 .containerCard .containerImagem {
   /* position: relative; */
