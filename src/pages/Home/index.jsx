@@ -10,11 +10,16 @@ import CardProjeto from "../../components/CardProjeto";
 import CarregandoProjetos from "../../components/CarregandoProjetos";
 import SemProjetos from "../../components/SemProjetos";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // import img from "../../assets/imagemSobre.jpg"
 
 import "./styles.css";
 
 export default function Home() {
+  AOS.init();
+
   const uidUsuario = sessionStorage.getItem("@Auth:usuario");
 
   const [dados, setDados] = useState([]);
@@ -78,7 +83,11 @@ export default function Home() {
     <>
       <Header />
       <div className="containerHome">
-        <div className="containerTextoInicio">
+        <div
+          className="containerTextoInicio"
+          data-aos="fade-down"
+          data-aos-duration="1700"
+        >
           <h1>Análise de Requisitos</h1>
           <p>Facilitando o desenvolvimento do seu projeto</p>
         </div>
@@ -92,7 +101,11 @@ export default function Home() {
                 <SemProjetos />
               ) : (
                 <>
-                  <div className="gridProjetos">
+                  <div
+                    className="gridProjetos"
+                    data-aos="zoom-in"
+                    data-aos-duration="1500"
+                  >
                     {dados.map((projeto, index) => (
                       <CardProjeto key={index} projeto={projeto} />
                     ))}

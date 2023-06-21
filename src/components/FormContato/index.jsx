@@ -5,9 +5,14 @@ import MuiAlert from "@mui/material/Alert";
 
 import emailjs from "@emailjs/browser";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import "./styles.css";
 
 export default function FormContato() {
+  AOS.init();
+
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [messagem, setMessagem] = useState("");
@@ -107,7 +112,11 @@ export default function FormContato() {
         </MuiAlert>
       </Snackbar>
 
-      <div className="containerFormContato">
+      <div
+        className="containerFormContato"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
         <div className="containerForm">
           <h1>Contato</h1>
           <p>Mande sua mensagem, que vamos entrar em contato com você</p>

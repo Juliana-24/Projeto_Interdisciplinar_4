@@ -3,17 +3,26 @@ import GridCardSobre from "../../components/GridCardSobre";
 import FormContato from "../../components/FormContato";
 import Footer from "../../components/Footer";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import seta from "../../assets/seta.gif";
 import imagemSobre from "../../assets/imagemSobre4.jpg";
 
 import "./styles.css";
 
 export default function Sobre() {
+  AOS.init();
+
   return (
     <>
       <Header />
       <div className="containerInicioSobre">
-        <div className="containerTextos">
+        <div
+          className="containerTextos"
+          data-aos="fade-right"
+          data-aos-duration="1700"
+        >
           <h1>Análise de Requisitos</h1>
           <p>Conheça mais sobre a análise de requisitos</p>
         </div>
@@ -21,7 +30,11 @@ export default function Sobre() {
           <img src={seta} alt="seta indicadora" />
         </div>
       </div>
-      <div className="containerInfo">
+      <div
+        className="containerInfo"
+        data-aos="fade-up-left"
+        data-aos-duration="1500"
+      >
         <div className="containerBorderImagem">
           <div className="containerImagemInformacoes">
             <img src={imagemSobre} alt="" />
