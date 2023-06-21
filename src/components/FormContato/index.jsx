@@ -14,17 +14,21 @@ export default function FormContato() {
 
   const [open, setOpen] = useState(false);
   const [sucesso, setSucesso] = useState(false);
-  const [aviso, setAviso] = useState(false);
+  const [abrirAviso, setAbrirAviso] = useState(false);
 
   function fecharSnackbar() {
     setOpen(false);
   }
 
+  function fecharAviso() {
+    setAbrirAviso(false);
+  }
+
   function enviarEmail(e) {
     e.preventDefault();
 
-    if (messagem === "") {
-      setAviso(true);
+    if (nome === "" || email === "" || messagem == "") {
+      setAbrirAviso(true);
       return;
     }
 
@@ -47,61 +51,63 @@ export default function FormContato() {
       setMessagem("");
 
       setSucesso(true);
+      setOpen(true);
     } catch (error) {
       setSucesso(false);
+      setOpen(true);
       console.log(error);
     }
   }
 
   return (
     <>
-      <div className="containerFormContato">
-        <Snackbar
-          anchorOrigin={{ vertical: "top", horizontal: "center" }}
-          open={open}
-          autoHideDuration={5000}
-          onClose={fecharSnackbar}
-        >
-          {sucesso ? (
-            <MuiAlert
-              elevation={6}
-              variant="filled"
-              onClose={fecharSnackbar}
-              severity="success"
-              sx={{ width: "100%" }}
-            >
-              Mensagem enviada com sucesso!
-            </MuiAlert>
-          ) : (
-            <MuiAlert
-              elevation={6}
-              variant="filled"
-              onClose={fecharSnackbar}
-              severity="error"
-              sx={{ width: "100%" }}
-            >
-              Não foi possivel enviar sua mensagem. Por favor, tente novamente
-            </MuiAlert>
-          )}
-        </Snackbar>
-        {aviso && (
-          <Snackbar
-            anchorOrigin={{ vertical: "top", horizontal: "center" }}
-            open={open}
-            autoHideDuration={5000}
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={open}
+        autoHideDuration={5000}
+        onClose={fecharSnackbar}
+      >
+        {sucesso ? (
+          <MuiAlert
+            elevation={6}
+            variant="filled"
             onClose={fecharSnackbar}
+            severity="success"
+            sx={{ width: "100%" }}
           >
-            <MuiAlert
-              elevation={6}
-              variant="filled"
-              onClose={fecharSnackbar}
-              severity="error"
-              sx={{ width: "100%" }}
-            >
-              Preencha todos os campos!
-            </MuiAlert>
-          </Snackbar>
+            Mensagem enviada com sucesso!
+          </MuiAlert>
+        ) : (
+          <MuiAlert
+            elevation={6}
+            variant="filled"
+            onClose={fecharSnackbar}
+            severity="error"
+            sx={{ width: "100%" }}
+          >
+            Não foi possivel enviar sua mensagem. Por favor, tente novamente
+          </MuiAlert>
         )}
+      </Snackbar>
+
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={abrirAviso}
+        autoHideDuration={5000}
+        onClose={fecharAviso}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          onClose={fecharAviso}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          Preencha todos os campos!
+        </MuiAlert>
+      </Snackbar>
+
+      <div className="containerFormContato">
         <div className="containerForm">
           <h1>Contato</h1>
           <p>Mande sua mensagem, que vamos entrar em contato com você</p>
