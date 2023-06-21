@@ -68,8 +68,8 @@ export default function Home() {
       <Header />
       <div className="containerHome">
         <div className="containerTextoInicio">
-          <h1>Uma nova forma de analizar requisitos</h1>
-          <p>Conheça uma nova forma de seus requisitos de projetos</p>
+          <h1>Análise de Requisitos</h1>
+          <p>Facilitando o desenvolvimento do seu projeto</p>
         </div>
         <div className="containerProjetos">
           <h1>Meus Projetos</h1>

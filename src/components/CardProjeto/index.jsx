@@ -18,11 +18,8 @@ export default function CardProjeto({ projeto }) {
         <img src={img} alt="" />
       </div>
       <div className="containerDetalhesProjeto">
-        <h3>{projeto.nomeProjeto}</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid unde
-          sit a id cumque debitis ex nihil ratione non doloremque.
-        </p>
+        <h2>{projeto.nomeProjeto}</h2>
+        <p>Veja e acompanhe a evoluçãodo do seu projeto</p>
         <div className="containerButton">
           <button onClick={navegacao}>Ver projeto</button>
         </div>

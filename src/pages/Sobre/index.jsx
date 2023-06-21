@@ -1,11 +1,10 @@
 import Header from "../../components/Header";
-
-import CardSobre from "../../components/CardSobre";
+import GridCardSobre from "../../components/GridCardSobre";
+import FormContato from "../../components/FormContato";
+import Footer from "../../components/Footer";
 
 import seta from "../../assets/seta.gif";
 import imagemSobre from "../../assets/imagemSobre4.jpg";
-
-import { BsFillBoxSeamFill } from "react-icons/bs";
 
 import "./styles.css";
 
@@ -43,26 +42,9 @@ export default function Sobre() {
           </p>
         </div>
       </div>
-      <div className="containerCards">
-        <h1>Benefícios da Análise de Requisitos</h1>
-        <div className="containerGridCardsSobre">
-          <CardSobre
-            iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
-            titulocard="Maior Controle"
-            textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta."
-          />
-          <CardSobre
-            iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
-            titulocard="Visualização das necessidades do projeto"
-            textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta."
-          />
-          <CardSobre
-            iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
-            titulocard="Visualização das necessidades do projeto"
-            textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta."
-          />
-        </div>
-      </div>
+      <GridCardSobre />
+      <FormContato />
+      <Footer />
     </>
   );
 }

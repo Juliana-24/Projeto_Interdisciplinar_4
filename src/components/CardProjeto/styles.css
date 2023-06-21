@@ -1,11 +1,9 @@
 .containerCard {
   background-color: #f2f2f2;
   border-radius: 20px;
-  /* max-height: 9rem; */
 }
 .containerCard .containerImagem {
   position: relative;
-  /* width: 300px; */
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .containerCard .containerImagem img {
@@ -16,6 +14,16 @@
 .containerCard .containerDetalhesProjeto {
   margin: 20px 20px;
 }
+.containerCard .containerDetalhesProjeto h2 {
+  color: #353535;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+.containerCard .containerDetalhesProjeto p {
+  color: #6e6e6e;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
 .containerCard .containerButton {
   width: 100%;
   align-items: center;
@@ -23,12 +31,13 @@
   justify-content: center;
 }
 .containerCard .containerButton button {
-  height: 45px;
-  width: 30%;
+  height: 40px;
+  width: 35%;
   background-color: #463f3a;
   color: #f2f2f2;
   font-size: 1.2rem;
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  font-weight: 600;
 }

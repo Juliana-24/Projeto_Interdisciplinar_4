@@ -31,6 +31,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogActions from "@mui/material/DialogActions";
 
+import swal from "sweetalert";
+
 import { MdAdd } from "react-icons/md";
 import { BsFillTrash3Fill } from "react-icons/bs";
 
@@ -209,8 +211,11 @@ export default function ProjetoPagina() {
 
       deletarProjeto(nomeProjeto);
 
-      // setOpen(true);
-      alert("Projeto excluido com sucesso");
+      swal(
+        "Projeto deletado",
+        "Seu projeto foi deletado com sucesso!",
+        "success"
+      );
 
       setInputs([]);
       setCheckedItems([]);

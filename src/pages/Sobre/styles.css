@@ -45,7 +45,8 @@
 .containerInfo .containerBorderImagem {
   width: 400px;
   height: 400px;
-  background-color: rgb(133, 133, 133);
+  background-color: rgb(156, 156, 156);
+
   display: flex;
   justify-content: flex-end;
   border-radius: 10px;
@@ -82,26 +83,4 @@
 .containerInfo .containerInformacoes p {
   color: #6e6e6e;
   text-align: center;
-}
-.containerCards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 50px 0;
-}
-.containerCards h1 {
-  color: #2e2e2e;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.containerCards .containerGridCardsSobre {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  gap: 2rem;
-  padding: 20px;
-  max-width: 1360px;
 }

@@ -9,7 +9,6 @@
 .containerNovoProjeto .containerTopo {
   width: 100%;
   height: 18rem;
-  background-color: #2b4162;
   background-image: linear-gradient(315deg, #4d4855 0%, #272626 74%);
 }
 .containerNovoProjeto .containerForm {
