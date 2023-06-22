@@ -4,8 +4,8 @@
   box-shadow: 7px 4px 36px 10px rgba(0, 0, 0, 0.19);
 }
 .containerCard .containerImagem {
-  /* position: relative; */
-  width: 430px;
+  position: relative;
+  /* width: 430px; */
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .containerCard .containerImagem img {
@@ -34,7 +34,7 @@
 }
 .containerCard .containerButton button {
   height: 40px;
-  width: 35%;
+  width: 45%;
   background-color: #463f3a;
   color: #f2f2f2;
   font-size: 1.2rem;
@@ -42,4 +42,10 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
+}
+@media (max-width: 1178px) {
+  .containerCard .containerButton button {
+    width: 50%;
+    /* font-size: 1.1rem; */
+  }
 }

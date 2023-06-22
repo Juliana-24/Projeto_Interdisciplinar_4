@@ -49,7 +49,8 @@
 .btnMenuMobile {
   display: none;
 }
-@media screen and (max-width: 780px) {
+
+@media (max-width: 780px) {
   .header img {
     display: flex;
     position: absolute;
@@ -98,5 +99,11 @@
     outline: none;
     top: 15px;
     right: 25px;
+  }
+}
+@media (max-width: 450px) {
+  .header img {
+    width: 50px;
+    height: 50px;
   }
 }

@@ -75,12 +75,14 @@ export default function Home() {
       <Header />
       <div className="containerHome">
         <div
-          className="containerTextoInicio"
+          className="containerInicio"
           data-aos="fade-down"
           data-aos-duration="1700"
         >
-          <h1>Análise de Requisitos</h1>
-          <p>Facilitando o desenvolvimento do seu projeto</p>
+          <div className="containerTextosIniciais">
+            <h1>Análise de Requisitos</h1>
+            <p>Facilitando o desenvolvimento do seu projeto</p>
+          </div>
         </div>
         <div className="containerProjetos">
           <h1>Meus Projetos</h1>
