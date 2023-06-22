@@ -14,7 +14,7 @@
 }
 .containerInicioSobre .containerTextos {
   padding: 70px 20px;
-  width: 55%;
+  width: 60%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
 }
@@ -64,11 +64,10 @@
 }
 .containerInfo .containerInformacoes {
   background-color: #fcfafa;
-
   margin-top: -30px;
   border-radius: 10px;
   width: 70%;
-  padding: 30px 10px;
+  padding: 30px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,4 +82,100 @@
 .containerInfo .containerInformacoes p {
   color: #6e6e6e;
   text-align: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 1340px) {
+  .containerInicioSobre .containerTextos {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .containerInfo .containerBorderImagem {
+    background-color: #e5e5e5;
+  }
+}
+
+@media (max-width: 1090px) {
+  .containerInfo .containerBorderImagem .containerImagemInformacoes {
+    height: 450px;
+    margin-top: -40px;
+  }
+  .containerInicioSobre .containerTextos {
+    width: 95%;
+  }
+}
+
+@media (max-width: 845px) {
+  .containerInicioSobre {
+    align-items: center;
+  }
+  .containerInicioSobre .containerTextos h1 {
+    font-size: 4.2rem;
+  }
+  .containerInicioSobre .containerTextos p {
+    font-size: 1.3rem;
+  }
+  .containerInicioSobre .containerSeta img {
+    width: 95px;
+  }
+  .containerInfo {
+    flex-direction: column;
+  }
+  .containerInfo .containerBorderImagem {
+    width: 85%;
+  }
+  .containerInfo .containerBorderImagem .containerImagemInformacoes {
+    width: 100%;
+    margin-right: 0;
+  }
+  .containerInfo .containerInformacoes {
+    width: 85%;
+  }
+}
+
+@media (max-width: 650px) {
+  .containerInfo .containerBorderImagem {
+    width: 90%;
+  }
+  .containerInfo .containerInformacoes {
+    width: 90%;
+  }
+  .containerInfo .containerInformacoes h2 {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 530px) {
+  .containerInfo {
+    padding: 90px 10px;
+  }
+  .containerInfo .containerBorderImagem {
+    width: 90%;
+    height: 280px;
+  }
+  .containerInfo .containerBorderImagem .containerImagemInformacoes {
+    height: 300px;
+  }
+  .containerInfo .containerInformacoes {
+    width: 90%;
+  }
+}
+
+@media (max-width: 410px) {
+  .containerInicioSobre .containerTextos h1 {
+    font-size: 4rem;
+  }
+  .containerInfo .containerBorderImagem {
+    width: 95%;
+  }
+  .containerInfo .containerInformacoes {
+    width: 95%;
+  }
+  .containerInfo .containerInformacoes h2 {
+    font-size: 2.1rem;
+  }
+  .containerInfo .containerInformacoes p {
+    font-size: 0.9rem;
+  }
 }

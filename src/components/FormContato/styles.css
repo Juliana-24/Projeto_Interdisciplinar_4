@@ -66,3 +66,29 @@
   cursor: pointer;
   margin-top: 1rem;
 }
+
+@media (max-width: 680px) {
+  .containerFormContato .containerForm {
+    width: 95%;
+  }
+}
+
+@media (max-width: 530px) {
+  .containerFormContato .containerForm p {
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .containerFormContato {
+    padding: 100px 0;
+  }
+  .containerFormContato .containerForm h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .containerFormContato .containerForm p {
+    display: none;
+  }
+}
