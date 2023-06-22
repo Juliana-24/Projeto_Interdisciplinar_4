@@ -13,12 +13,17 @@ import logo from "../../assets/logoBranca.png";
 import { grey } from "@mui/material/colors";
 
 import { RxExit } from "react-icons/rx";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import "./styles.css";
 
 export default function Header() {
   const { singOut } = useContext(AuthContext);
+
   const navigate = useNavigate();
+
+  const [isMobile, setIsMobile] = useState(false);
+
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const ITEM_HEIGHT = 55;
@@ -42,44 +47,55 @@ export default function Header() {
         <img src={logo} alt="" />
       </Link>
       <div className="containerInicio">
-        <ul className="btnHeader">
-          <Link to="/home">Home</Link>
-          <Link to="/sobre">Sobre</Link>
-          <Link to="/novo_projeto">Novo Projeto</Link>
+        <ul className={isMobile ? "headerLinksMobile" : "headerLinks"}>
+          <Link to="/home" className="link">
+            Home
+          </Link>
+          <Link to="/sobre" className="link">
+            Sobre
+          </Link>
+          <Link to="/novo_projeto" className="link">
+            Novo Projeto
+          </Link>
         </ul>
-        <IconButton
-          size="inherit"
-          aria-label="account of current user"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
-          onClick={handleMenu}
-        >
-          <AccountCircle sx={{ fontSize: 30, color: grey[100] }} />
-        </IconButton>
+        <div className="containerIcone">
+          <IconButton
+            size="inherit"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleMenu}
+          >
+            <AccountCircle sx={{ fontSize: 30, color: grey[100] }} />
+          </IconButton>
 
-        <Menu
-          id="long-menu"
-          MenuListProps={{
-            "aria-labelledby": "long-button",
-          }}
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          PaperProps={{
-            style: {
-              maxHeight: ITEM_HEIGHT * 5.5,
-              maxWidth: "45%",
-              minWidth: "14%",
-              display: "block",
-            },
-          }}
-        >
-          <MenuItem onClick={handleLogout} id="menuIcone">
-            <RxExit />
-            Sair
-          </MenuItem>
-        </Menu>
+          <Menu
+            id="long-menu"
+            MenuListProps={{
+              "aria-labelledby": "long-button",
+            }}
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            PaperProps={{
+              style: {
+                maxHeight: ITEM_HEIGHT * 5.5,
+                maxWidth: "45%",
+                minWidth: "14%",
+                display: "block",
+              },
+            }}
+          >
+            <MenuItem onClick={handleLogout} id="menuIcone">
+              <RxExit />
+              Sair
+            </MenuItem>
+          </Menu>
+        </div>
       </div>
+      <button className="btnMenuMobile" onClick={() => setIsMobile(!isMobile)}>
+        {isMobile ? <FaTimes /> : <FaBars />}
+      </button>
     </header>
   );
 }
