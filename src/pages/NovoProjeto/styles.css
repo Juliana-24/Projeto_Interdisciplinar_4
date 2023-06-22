@@ -15,8 +15,7 @@
   background-color: #fefefe;
   width: 580px;
   height: 600px;
-  /* height: 610px;
-  width: 650px; */
+
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -123,4 +122,20 @@
   color: #f1f1f1;
   cursor: pointer;
   margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .containerNovoProjeto .containerForm {
+    width: 95%;
+  }
+}
+
+@media (max-width: 520px) {
+  .containerNovoProjeto .containerForm .containerTopoForm .containerImagem {
+    width: 65px;
+    height: 65px;
+  }
+  .containerNovoProjeto .containerForm .containerTopoForm h2 {
+    font-size: 1.8rem;
+  }
 }
