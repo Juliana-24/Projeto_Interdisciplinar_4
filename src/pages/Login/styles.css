@@ -81,3 +81,11 @@
   color: #463f3a;
   margin-left: 4px;
 }
+@media (max-width: 450px) {
+  .container .containerLogin .containerLogo {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 1.8rem;
+    margin-top: 0;
+  }
+}
