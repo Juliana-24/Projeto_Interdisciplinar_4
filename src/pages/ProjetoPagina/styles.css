@@ -74,7 +74,6 @@
   width: 100%;
   margin-top: 0.4rem;
   height: 35px;
-  /* margin-bottom: 10px; */
 }
 .containerProjeto
   .containerConteudo
@@ -172,4 +171,26 @@
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .containerProjeto .containerConteudo {
+    width: 95%;
+  }
+}
+
+@media (max-width: 390px) {
+  .containerProjeto .containerConteudo .containerTitulo h1 {
+    font-size: 1.8rem;
+  }
+  .containerProjeto .containerConteudo .containerTitulo .btnExcluirProjeto {
+    padding: 6px;
+  }
+  .containerProjeto .containerConteudo {
+    padding: 15px 15px;
+    margin-top: -9rem;
+  }
+  .containerProjeto .containerConteudo .containerRequisitos {
+    margin-top: 0.5rem;
+  }
 }
