@@ -103,7 +103,7 @@ export default function Login() {
             )}
             <button className="btnLogin" onClick={handleSubmit}>
               {carregando ? (
-                <CircularProgress size={28} color="inherit" thickness={5} />
+                <CircularProgress size={27} color="inherit" thickness={5} />
               ) : (
                 "Entrar"
               )}

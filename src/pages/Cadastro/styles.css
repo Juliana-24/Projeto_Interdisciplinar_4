@@ -74,8 +74,8 @@
 }
 @media (max-width: 355px) {
   .container .containerCadastro .containerInicio .containerLogo {
-    width: 85px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
     margin-top: 0;
   }
   .container .containerCadastro .containerInicio h1 {

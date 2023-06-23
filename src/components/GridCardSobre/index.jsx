@@ -17,7 +17,7 @@ export default function GridCardSobre() {
       data-aos-anchor-placement="top-center"
       data-aos-duration="1500"
     >
-      <h1>Benefícios da Análise de Requisitos</h1>
+      <h1>Vantagens da análise de requisitos</h1>
       <div className="containerGridCardsSobre">
         <CardSobre
           iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}

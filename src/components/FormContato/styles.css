@@ -91,4 +91,7 @@
   .containerFormContato .containerForm p {
     display: none;
   }
+  .containerFormContato .containerForm form textarea {
+    height: 150px;
+  }
 }

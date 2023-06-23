@@ -131,7 +131,10 @@
   }
 }
 
-@media (max-width: 794px) {
+@media (max-width: 796px) {
+  .containerHome .containerInicio h1 {
+    font-size: 4rem;
+  }
   .containerHome .containerParteFinal .containerTextosFinais {
     width: 65%;
   }

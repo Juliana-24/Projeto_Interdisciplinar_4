@@ -158,17 +158,27 @@
     height: 300px;
   }
   .containerInfo .containerInformacoes {
-    width: 90%;
+    width: 95%;
+    text-align: center;
+  }
+  .containerInfo .containerInformacoes h2 {
+    font-size: 2.1rem;
   }
 }
 
 @media (max-width: 410px) {
+  .containerInicioSobre {
+    padding-left: 0px;
+  }
+  .containerInicioSobre .containerTextos {
+    width: 100%;
+  }
   .containerInicioSobre .containerTextos h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
   .containerInfo .containerBorderImagem {
-    width: 95%;
+    width: 100%;
     height: 220px;
   }
   .containerInfo .containerBorderImagem .containerImagemInformacoes {
@@ -176,7 +186,7 @@
   }
 
   .containerInfo .containerInformacoes {
-    width: 95%;
+    width: 100%;
   }
   .containerInfo .containerInformacoes h2 {
     font-size: 2rem;
