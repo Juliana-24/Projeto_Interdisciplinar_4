@@ -41,7 +41,7 @@ export default function Sobre() {
           </div>
         </div>
         <div className="containerInformacoes">
-          <h2>Conheça a Análise de Requisitos</h2>
+          <h2>Conheça a análise de requisitos</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
             repellendus officia iste nulla repudiandae sapiente dolore adipisci

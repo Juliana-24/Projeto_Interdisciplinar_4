@@ -112,7 +112,7 @@
     align-items: center;
   }
   .containerInicioSobre .containerTextos h1 {
-    font-size: 4.2rem;
+    font-size: 4rem;
   }
   .containerInicioSobre .containerTextos p {
     font-size: 1.3rem;
@@ -164,16 +164,22 @@
 
 @media (max-width: 410px) {
   .containerInicioSobre .containerTextos h1 {
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
   .containerInfo .containerBorderImagem {
     width: 95%;
+    height: 220px;
   }
+  .containerInfo .containerBorderImagem .containerImagemInformacoes {
+    height: 250px;
+  }
+
   .containerInfo .containerInformacoes {
     width: 95%;
   }
   .containerInfo .containerInformacoes h2 {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
   .containerInfo .containerInformacoes p {
     font-size: 0.9rem;

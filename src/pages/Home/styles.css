@@ -97,7 +97,7 @@
     backdrop-filter: blur(10px);
   }
   .containerHome .containerProjetos .gridProjetos {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 20px;
     gap: 40px;
   }
@@ -146,16 +146,19 @@
     padding: 50px 10px;
   }
   .containerHome .containerInicio h1 {
-    font-size: 4.1rem;
+    font-size: 3.5rem;
   }
   .containerHome .containerInicio p {
     font-size: 1.3rem;
   }
   .containerHome .containerProjetos .gridProjetos {
-    padding: 15px;
+    padding: 15px 10px;
+  }
+  .containerHome .containerProjetos h1 {
+    font-size: 2.1rem;
   }
   .containerHome .containerParteFinal .containerTextosFinais {
-    width: 80%;
+    width: 90%;
   }
   .containerHome .containerParteFinal .containerTextosFinais h2 {
     font-size: 1.6rem;
@@ -163,12 +166,17 @@
 }
 
 @media (max-width: 402px) {
+  .containerHome .containerInicio {
+    padding-left: 5px;
+  }
   .containerHome .containerInicio h1 {
-    font-size: 3.9rem;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
   }
   .containerHome .containerInicio p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
+
   .containerHome .containerParteFinal .containerTextosFinais h2 {
     font-size: 1.6rem;
   }
