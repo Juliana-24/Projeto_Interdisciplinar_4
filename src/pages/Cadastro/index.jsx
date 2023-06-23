@@ -2,9 +2,12 @@ import { useState } from "react";
 
 import { useNavigate, Link } from "react-router-dom";
 
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+// import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 
-import { auth } from "../../services/firebaseConfig";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+// import { auth } from "../../services/firebaseConfig";
+import CircularProgress from "@mui/material/CircularProgress";
 
 import swal from "sweetalert";
 
@@ -14,25 +17,31 @@ import "./styles.css";
 
 export default function Login() {
   const navigate = useNavigate();
+  const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [carregando, setCarregando] = useState(false);
 
-  const [createUserWithEmailAndPassword] =
-    useCreateUserWithEmailAndPassword(auth);
-
-  function handleSignOut(e) {
+  async function handleSignOut(e) {
     e.preventDefault();
-    createUserWithEmailAndPassword(email, password)
+    setCarregando(true);
+
+    createUserWithEmailAndPassword(auth, email, password)
       .then((response) => {
         swal(
           "Cadastro realizado!",
           "Seu cadastro foi criado com sucesso!",
           "success"
         );
+        setCarregando(false);
         navigate("/");
         console.log(response);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        swal("Erro", "Ocorreu um erro ao realizar o cadastro.", "error");
+        setCarregando(false);
+        console.log(error);
+      });
   }
 
   return (
@@ -44,7 +53,7 @@ export default function Login() {
           </div>
           <h1>Cadastro</h1>
         </div>
-        <form className="form">
+        <form className="form" onSubmit={handleSignOut}>
           <input
             type="email"
             name="email"
@@ -59,8 +68,12 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button className="btnCadastro" onClick={handleSignOut}>
-            Cadastrar
+          <button className="btnCadastro">
+            {carregando ? (
+              <CircularProgress size={27} color="inherit" thickness={5} />
+            ) : (
+              "Cadastrar"
+            )}
           </button>
           <p className="textoCadastro">
             Já tem conta?<Link to="/">Login</Link>

@@ -21,8 +21,8 @@
   margin-bottom: 1.5rem;
 }
 .container .containerCadastro .containerInicio .containerLogo {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin-top: 4.5rem;
   margin-bottom: 0.5rem;
 }
@@ -51,6 +51,7 @@
   font-size: 1.1rem;
   border: none;
   outline: none;
+  color: #463f3a;
 }
 .container .containerCadastro .form .btnCadastro {
   width: 100%;
