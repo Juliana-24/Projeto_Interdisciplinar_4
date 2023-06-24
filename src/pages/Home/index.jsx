@@ -15,6 +15,11 @@ import "aos/dist/aos.css";
 
 import logo from "../../assets/logo.png";
 
+import imagem1 from "../../assets/imagemSobre1.jpg";
+import imagem2 from "../../assets/imagemSobre2.jpg";
+import imagem3 from "../../assets/teste.jpg";
+import imagem4 from "../../assets/imgTeste.jpg";
+
 import "./styles.css";
 
 export default function Home() {
@@ -25,6 +30,8 @@ export default function Home() {
   const [dados, setDados] = useState([]);
   const [carregando, setCarregando] = useState(false);
   const [semProjetos, setSemProjetos] = useState(false);
+
+  const imagensProjetos = [imagem1, imagem2, imagem3, imagem4];
 
   const lerDadosProjetos = async () => {
     const usersCollection = collection(dataBaseApp, "users");
@@ -37,9 +44,13 @@ export default function Home() {
       );
       const projetos = [];
 
+      let contador = 0;
+
       querySnapshot.forEach((doc) => {
         const projeto = doc.data();
+        projeto.imagem = imagensProjetos[contador] || imagem1;
         projetos.push(projeto);
+        contador++;
       });
 
       return projetos;

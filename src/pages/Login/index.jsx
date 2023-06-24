@@ -27,7 +27,7 @@ export default function Login() {
   const { signIn, signed, erro, limpaErro, carregando } =
     useContext(AuthContext);
 
-  const handleSubmit = async (e) => {
+  const fazerLogin = async (e) => {
     e.preventDefault();
 
     if (email === "" || password === "") {
@@ -101,7 +101,7 @@ export default function Login() {
                 <p>Email ou senha incorreto</p>
               </div>
             )}
-            <button className="btnLogin" onClick={handleSubmit}>
+            <button className="btnLogin" onClick={fazerLogin}>
               {carregando ? (
                 <CircularProgress size={27} color="inherit" thickness={5} />
               ) : (

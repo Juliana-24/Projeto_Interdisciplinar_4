@@ -64,22 +64,23 @@ export default function ProjetoPagina() {
     await atualizarChecked(event, index);
   };
 
-  const handleAddInput = () => {
+  const adicionarInput = () => {
     setInputs([...inputs, ""]);
   };
 
-  const handleInputChange = (index, value) => {
+  const inputsConteudo = (index, value) => {
     const newInputs = [...inputs];
     newInputs[index] = value;
     setInputs(newInputs);
   };
 
-  const handleRemoveInput = (index) => {
+  const removerInput = (index) => {
     const newInputs = [...inputs];
     newInputs.splice(index, 1);
     setInputs(newInputs);
   };
-  const handleExcluirProjeto = () => {
+
+  const excluirProjeto = () => {
     setDialogAberto(true);
   };
 
@@ -171,7 +172,7 @@ export default function ProjetoPagina() {
     }
   };
 
-  const handleDeleteRequisito = async (requisito) => {
+  const deletarRequisito = async (requisito) => {
     const usersCollection = collection(dataBaseApp, "users");
     const userDoc = doc(usersCollection, uidUsuario);
     const projetosCollection = collection(userDoc, nomeProjeto);
@@ -292,10 +293,7 @@ export default function ProjetoPagina() {
         <div className="containerConteudo">
           <div className="containerTitulo">
             <h1>{nomeProjeto}</h1>
-            <button
-              className="btnExcluirProjeto"
-              onClick={handleExcluirProjeto}
-            >
+            <button className="btnExcluirProjeto" onClick={excluirProjeto}>
               Excluir Projeto
             </button>
           </div>
@@ -322,9 +320,7 @@ export default function ProjetoPagina() {
                         label={requisito.nome}
                         labelPlacement="end"
                       />
-                      <button
-                        onClick={() => handleDeleteRequisito(requisito.nome)}
-                      >
+                      <button onClick={() => deletarRequisito(requisito.nome)}>
                         <BsFillTrash3Fill size={22} color="#4a4a4a" />
                       </button>
                     </div>
@@ -337,17 +333,17 @@ export default function ProjetoPagina() {
                   <div className="containerItensInput" key={index}>
                     <input
                       value={input}
-                      onChange={(e) => handleInputChange(index, e.target.value)}
+                      onChange={(e) => inputsConteudo(index, e.target.value)}
                       placeholder="Digite seu novo requisito"
                       required
                     />
-                    <button onClick={() => handleRemoveInput(index)}>
+                    <button onClick={() => removerInput(index)}>
                       <BsFillTrash3Fill size={22} color="#4a4a4a" />
                     </button>
                   </div>
                 ))}
               </div>
-              <button className="btnAdicionar" onClick={handleAddInput}>
+              <button className="btnAdicionar" onClick={adicionarInput}>
                 <MdAdd size={22} color={"#7c7c7c"} />
                 Adicionar Requisito
               </button>

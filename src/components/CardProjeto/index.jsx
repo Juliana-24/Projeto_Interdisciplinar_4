@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-import img from "../../assets/imagemSobre.jpg";
-
 import "./styles.css";
 
 export default function CardProjeto({ projeto }) {
@@ -15,7 +13,7 @@ export default function CardProjeto({ projeto }) {
   return (
     <div className="containerCard">
       <div className="containerImagem">
-        <img src={img} alt="Imagem de capa do projeto" />
+        <img src={projeto.imagem} alt="Imagem de capa do projeto" />
       </div>
       <div className="containerDetalhesProjeto">
         <h2>{projeto.nomeProjeto}</h2>
