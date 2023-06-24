@@ -2,12 +2,11 @@ import { useState } from "react";
 
 import { useNavigate, Link } from "react-router-dom";
 
-// import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-// import { auth } from "../../services/firebaseConfig";
 import CircularProgress from "@mui/material/CircularProgress";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 import swal from "sweetalert";
 
@@ -21,8 +20,14 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [carregando, setCarregando] = useState(false);
+  const [abrirAlert, setAbrirAlert] = useState(false);
+  const [mensagemErro, setMensagemErro] = useState("");
 
-  async function handleSignOut(e) {
+  function fecharSnackbar() {
+    setAbrirAlert(false);
+  }
+
+  async function criarCadastro(e) {
     e.preventDefault();
     setCarregando(true);
 
@@ -38,48 +43,78 @@ export default function Login() {
         console.log(response);
       })
       .catch((error) => {
-        swal("Erro", "Ocorreu um erro ao realizar o cadastro.", "error");
-        setCarregando(false);
-        console.log(error);
+        if (error.code === "auth/email-already-in-use") {
+          setMensagemErro(
+            "Esse email já está sendo usado. Tente novamente com outro email"
+          );
+          setAbrirAlert(true);
+          setCarregando(false);
+        } else if (error.code === "auth/weak-password") {
+          setMensagemErro("A senha precisa ter no minímo 6 caracteres");
+          setAbrirAlert(true);
+          setCarregando(false);
+        } else {
+          swal("Erro", "Ocorreu um erro ao realizar o cadastro.", "error");
+          setCarregando(false);
+          console.log(error);
+        }
       });
   }
 
   return (
-    <div className="container">
-      <div className="containerCadastro">
-        <div className="containerInicio">
-          <div className="containerLogo">
-            <img src={logo} alt="imagem logo" />
+    <>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={abrirAlert}
+        autoHideDuration={5000}
+        onClose={fecharSnackbar}
+      >
+        <MuiAlert
+          elevation={6}
+          variant="filled"
+          onClose={fecharSnackbar}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          {mensagemErro}
+        </MuiAlert>
+      </Snackbar>
+      <div className="container">
+        <div className="containerCadastro">
+          <div className="containerInicio">
+            <div className="containerLogo">
+              <img src={logo} alt="imagem logo" />
+            </div>
+            <h1>Cadastro</h1>
           </div>
-          <h1>Cadastro</h1>
+          <form className="form" onSubmit={criarCadastro}>
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite seu email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Digite sua senha"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button className="btnCadastro">
+              {carregando ? (
+                <CircularProgress size={27} color="inherit" thickness={5} />
+              ) : (
+                "Cadastrar"
+              )}
+            </button>
+            <p className="textoCadastro">
+              Já tem conta?<Link to="/">Login</Link>
+            </p>
+          </form>
         </div>
-        <form className="form" onSubmit={handleSignOut}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Digite seu email"
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Digite sua senha"
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button className="btnCadastro">
-            {carregando ? (
-              <CircularProgress size={27} color="inherit" thickness={5} />
-            ) : (
-              "Cadastrar"
-            )}
-          </button>
-          <p className="textoCadastro">
-            Já tem conta?<Link to="/">Login</Link>
-          </p>
-        </form>
       </div>
-    </div>
+    </>
   );
 }
