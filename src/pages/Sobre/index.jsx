@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import Header from "../../components/Header";
 import GridCardSobre from "../../components/GridCardSobre";
 import FormContato from "../../components/FormContato";
@@ -14,6 +16,12 @@ import "./styles.css";
 export default function Sobre() {
   AOS.init();
 
+  const scroll = useRef();
+
+  function rolagem() {
+    scroll.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <Header />
@@ -27,9 +35,14 @@ export default function Sobre() {
           <p>Conheça mais sobre a análise de requisitos</p>
         </div>
         <div className="containerSeta">
-          <img src={seta} alt="seta indicadora" />
+          <a onClick={rolagem}>
+            <img src={seta} alt="seta indicadora" />
+          </a>
         </div>
       </div>
+
+      <div ref={scroll}></div>
+
       <div
         className="containerInfo"
         data-aos="fade-down"

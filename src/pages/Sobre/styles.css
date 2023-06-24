@@ -33,6 +33,7 @@
 }
 .containerInicioSobre .containerSeta img {
   width: 105px;
+  cursor: pointer;
 }
 .containerInfo {
   background-color: #e5e5e5;
