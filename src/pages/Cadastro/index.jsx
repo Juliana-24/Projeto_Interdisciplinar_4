@@ -17,6 +17,7 @@ import "./styles.css";
 export default function Login() {
   const navigate = useNavigate();
   const auth = getAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [carregando, setCarregando] = useState(false);
