@@ -56,11 +56,23 @@ export default function Sobre() {
         <div className="containerInformacoes">
           <h2>Conheça a análise de requisitos</h2>
           <p>
+<<<<<<< HEAD
           Já foi dito que requisitos são sinónimos de funções, ou seja, tudo o que o software precisa fazer funcionalmente. 
           No entanto, agora espera-se que os requisitos de software se apliquem a mais do que funções apenas,
           requisitos além das funções objetivas, restrições e restrições que um sistema deve atender, convenções,
           padrões ou requisitos definidos pelo usuário. Em geral, um requisito é uma condição necessária para atingir um objetivo.
           Portanto, o sistema proposto deve atender aos requisitos ou limitações do desenvolvimento do sistema.
+=======
+            Já foi dito que requisitos são sinônimos de funções, ou seja, tudo o
+            que o software precisa fazer funcionalmente. No entanto, agora
+            espera-se que os requisitos de software se apliquem a mais do que
+            apenas funções. requisitos Além das funções objetivas, qualificações
+            e restrições que um sistema deve atender, convenções, padrões ou
+            requisitos definidos pelo usuário. Em geral, um requisito é uma
+            condição necessária para atingir um objetivo. Portanto, o sistema
+            proposto deve atender aos requisitos ou limitações do
+            desenvolvimento do sistema.
+>>>>>>> 0e57e4f9c24cb7d92c46d9f35e102c66f0b7972a
           </p>
         </div>
       </div>

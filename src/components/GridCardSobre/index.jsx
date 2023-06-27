@@ -31,9 +31,14 @@ export default function GridCardSobre() {
         />
         <CardSobre
           iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
+<<<<<<< HEAD
           titulocard="Organização"
           textoCard="Você e seu cliente conseguem de maneira mais eficaz ter a noção do que está acontecendo no projeto
            e se está de acordo com o combinado"
+=======
+          titulocard="Visualização"
+          textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tenetur provident ad ea corporis totam!"
+>>>>>>> 0e57e4f9c24cb7d92c46d9f35e102c66f0b7972a
         />
       </div>
     </div>
