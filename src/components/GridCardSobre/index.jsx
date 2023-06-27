@@ -21,8 +21,8 @@ export default function GridCardSobre() {
       <div className="containerGridCardsSobre">
         <CardSobre
           iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
-          titulocard="Maior Controle"
-          textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta."
+          titulocard="Rapidez"
+          textoCard="Entrega de um projeto com mais rapidez e com muito menos defeito."
         />
         <CardSobre
           iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
