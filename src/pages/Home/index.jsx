@@ -65,7 +65,7 @@ export default function Home() {
     try {
       const projetos = await lerDadosProjetos();
 
-      if (projetos.length < 0) {
+      if (projetos.length <= 0) {
         setSemProjetos(true);
       }
 
