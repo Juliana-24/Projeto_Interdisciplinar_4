@@ -126,9 +126,8 @@ export default function Home() {
           <div className="containerTextosFinais">
             <h2>Análise de Requisitos</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-              saepe voluptatum nostrum exercitationem quia adipisci laboriosam
-              corrupti error ducimus mollitia?
+              Esse site te fará ver de uma forma mais simplificada e eficiente como funciona os requisitos,
+              vamos juntos conhecer melhor os requisitos de software!
             </p>
           </div>
         </div>
