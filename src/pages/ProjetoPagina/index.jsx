@@ -108,12 +108,14 @@ export default function ProjetoPagina() {
   const enviarDados = async (e) => {
     e.preventDefault();
 
+    const inputsPreenchidos = inputs.filter((input) => input.trim() !== "");
+
     const usersCollection = collection(dataBaseApp, "users");
     const userDoc = doc(usersCollection, uidUsuario);
     const projetosCollection = collection(userDoc, nomeProjeto);
 
     try {
-      const etapas = inputs.map((etapa, index) => ({
+      const etapas = inputsPreenchidos.map((etapa, index) => ({
         nome: etapa,
         checked: checkedItems[index] || false,
       }));
@@ -133,6 +135,7 @@ export default function ProjetoPagina() {
       console.error(error);
     }
   };
+
 
   const lerDados = async () => {
     setCarregando(true);
