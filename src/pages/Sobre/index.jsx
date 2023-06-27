@@ -56,15 +56,11 @@ export default function Sobre() {
         <div className="containerInformacoes">
           <h2>Conheça a análise de requisitos</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            repellendus officia iste nulla repudiandae sapiente dolore adipisci
-            quae sed. Suscipit a odit voluptate laboriosam pariatur, veniam
-            architecto necessitatibus nam laudantium, inventore similique sequi
-            velit, quis corrupti. Nihil dignissimos, ducimus atque non, a
-            repudiandae veniam exercitationem, quas necessitatibus corrupti
-            maiores veritatis deserunt esse minus voluptatibus eius eaque libero
-            voluptatum laborum autem incidunt? Repudiandae minima molestias
-            aspernatur laboriosam magnam velit! Ipsam, sequi.
+          Já foi dito que requisitos são sinónimos de funções, ou seja, tudo o que o software precisa fazer funcionalmente. 
+          No entanto, agora espera-se que os requisitos de software se apliquem a mais do que funções apenas,
+          requisitos além das funções objetivas, restrições e restrições que um sistema deve atender, convenções,
+          padrões ou requisitos definidos pelo usuário. Em geral, um requisito é uma condição necessária para atingir um objetivo.
+          Portanto, o sistema proposto deve atender aos requisitos ou limitações do desenvolvimento do sistema.
           </p>
         </div>
       </div>

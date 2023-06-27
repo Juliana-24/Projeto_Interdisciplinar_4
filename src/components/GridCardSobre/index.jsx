@@ -22,17 +22,18 @@ export default function GridCardSobre() {
         <CardSobre
           iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
           titulocard="Rapidez"
-          textoCard="Entrega de um projeto com mais rapidez e com muito menos defeito."
+          textoCard="Entrega de um projeto com mais rapidez e com muito menos risco de defeitos."
         />
         <CardSobre
           iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
-          titulocard="Visualização das necessidades do projeto"
-          textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta."
+          titulocard="Visualização de custo"
+          textoCard="Com os requisitos é possivel fazer o custeio de quanto poderá custar seu projeto para melhor planejamento."
         />
         <CardSobre
           iconeCard={<BsFillBoxSeamFill size={34} color="#464646" />}
-          titulocard="Visualização das necessidades do projeto"
-          textoCard="Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, soluta."
+          titulocard="Organização"
+          textoCard="Você e seu cliente conseguem de maneira mais eficaz ter a noção do que está acontecendo no projeto
+           e se está de acordo com o combinado"
         />
       </div>
     </div>
